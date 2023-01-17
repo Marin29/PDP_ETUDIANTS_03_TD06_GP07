@@ -1,0 +1,166 @@
+[
+    {
+        "id": "96c3a2fc1aa29ea4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "de30a21f706f6c38",
+        "type": "mqtt in",
+        "z": "96c3a2fc1aa29ea4",
+        "name": "",
+        "topic": "TD06_GP07/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c619ac0036f91e40",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 560,
+        "wires": [
+            [
+                "4825f044da7dac8a"
+            ]
+        ]
+    },
+    {
+        "id": "461ddeb6586bf143",
+        "type": "mqtt in",
+        "z": "96c3a2fc1aa29ea4",
+        "name": "",
+        "topic": "TD06_GP07/relhum",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c619ac0036f91e40",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 640,
+        "wires": [
+            [
+                "7d1039d75539d1b7"
+            ]
+        ]
+    },
+    {
+        "id": "4825f044da7dac8a",
+        "type": "ui_gauge",
+        "z": "96c3a2fc1aa29ea4",
+        "name": "",
+        "group": "09ce7bed69233235",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "7d1039d75539d1b7",
+        "type": "ui_gauge",
+        "z": "96c3a2fc1aa29ea4",
+        "name": "",
+        "group": "aeba90a787d3f479",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c619ac0036f91e40",
+        "type": "mqtt-broker",
+        "name": "Broker",
+        "broker": "27cc61dbaffc4da08cd0081cabd8cf01.s2.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "09ce7bed69233235",
+        "type": "ui_group",
+        "name": "temp",
+        "tab": "fc324df311d88d0d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aeba90a787d3f479",
+        "type": "ui_group",
+        "name": "humidity",
+        "tab": "fc324df311d88d0d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fc324df311d88d0d",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
